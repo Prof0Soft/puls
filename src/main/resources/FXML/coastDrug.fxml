@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="600.0" prefWidth="400.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.CoastDrug">
+   <children>
+      <BorderPane layoutX="-100.0" layoutY="-84.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <bottom>
+            <Button fx:id="saveData" onAction="#btnClickSaveCheange" disable="true" mnemonicParsing="false" text="Сохранить" textAlignment="CENTER" BorderPane.alignment="CENTER_RIGHT">
+               <BorderPane.margin>
+                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+               </BorderPane.margin>
+            </Button>
+         </bottom>
+         <center>
+            <TableView fx:id="tableView" editable="true" prefHeight="214.0" prefWidth="256.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="tvcNameDrug" maxWidth="450.0" minWidth="250.0" prefWidth="350.0" text="Наименование препарата" />
+                <TableColumn fx:id="tvcCoastDrug" prefWidth="75.0" text="Стоимость" />
+              </columns>
+            </TableView>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

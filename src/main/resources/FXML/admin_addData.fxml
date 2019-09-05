@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet vista.css?>
+
+<StackPane fx:id="adminAddDataVista" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.java.controllers.AdminAddDataController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="600.0">
+         <center>
+            <TableView fx:id="adminTableView" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="idSign" minWidth="40" prefWidth="40" text="Признак" />
+                <TableColumn fx:id="idIndexInDB" minWidth="50" prefWidth="50" text="Индекс в БД" />
+                <TableColumn fx:id="idNameDrug" minWidth="400" prefWidth="400" text="Имя препарата" />
+                <TableColumn fx:id="idDateEnterDrug" minWidth="80" prefWidth="80" text="Дата загрузки" />
+                <TableColumn fx:id="idSerialNumberTheDrug" minWidth="80" prefWidth="80" text="Серийный номер препарата" />
+                <TableColumn fx:id="idhealthlife" minWidth="80" prefWidth="80" text="Срок годности препарата" />
+                <TableColumn fx:id="idNumberFharmacy" minWidth="100" prefWidth="100" text="Номер аптеки" />
+                <TableColumn fx:id="idNamePharmacy" minWidth="400.0" prefWidth="400" text="Имя аптеки" />
+                <TableColumn fx:id="idNumberStart" minWidth="50" prefWidth="50" text="Количество(начало)" />
+                <TableColumn fx:id="idNumberImport" minWidth="50" prefWidth="50" text="Количество (приход)" />
+                <TableColumn fx:id="idNumberExport" minWidth="50" prefWidth="50" text="Количество (расход)" />
+                <TableColumn fx:id="idNumberEnd" minWidth="50" prefWidth="50" text="Количество (конец)" />
+                <TableColumn fx:id="status" minWidth="50" prefWidth="50" text="Статус" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnLoadDataFromExcel" contentDisplay="CENTER" mnemonicParsing="false" onAction="#onClickLoadDataFromFile" text="Загрузить данные из файла">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Label fx:id="lblImportRow" text="Всего загружено строк - " visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblImportAllDrug" text="Найдено препаратов - " visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblImportAllPharm" text="Найдено аптек - " visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnRecordInMySQL" disable="true" mnemonicParsing="false" onAction="#onClickExportToMySQL" text="Выгрузить в MySQL">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin></Button>
+                  <Label fx:id="lblExportRow" text="Всего выгружено строк - " visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblExportDrug" text="Выгружено препаратов - " visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblExportPharm" text="Выгружено аптек - " visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblExportInsertPharm" text="Добавлено в базу аптек -" visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblExportSkipPharm" text="Пропущено аптек - " visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+                  <Label fx:id="lblExportError" text="Ошибок - " visible="false">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Label>
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

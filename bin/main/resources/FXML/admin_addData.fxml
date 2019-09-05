@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?scenebuilder-stylesheet vista.css?>
+
+<StackPane fx:id="adminAddDataVista" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="puls.controllers.AdminAddDataController">
+   <children>
+      <BorderPane prefHeight="600.0" prefWidth="600.0">
+         <center>
+            <TableView prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+              <columns>
+                <TableColumn fx:id="idSeries" minWidth="75.0" prefWidth="75.0" text="Серия/Дата" />
+                <TableColumn fx:id="idHelthLife" minWidth="75.0" prefWidth="75.0" text="Срок годности/Номер" />
+                <TableColumn fx:id="idPharm" minWidth="200.0" prefWidth="200.0" text="Контрагент" />
+                <TableColumn fx:id="idCountStart" minWidth="75.0" prefWidth="75.0" text="Количество(начало)" />
+                <TableColumn fx:id="idCountInto" minWidth="75.0" prefWidth="75.0" text="Количество (приход)" />
+                <TableColumn fx:id="idCountOut" minWidth="75.0" prefWidth="75.0" text="Количество (расход)" />
+                <TableColumn fx:id="idCountEnd" minWidth="75.0" prefWidth="75.0" text="Количество (конец)" />
+              </columns>
+            </TableView>
+         </center>
+         <top>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnLoadDataFromExcel" onAction="#onClickLoadDataFromFile" contentDisplay="CENTER" mnemonicParsing="false" text="Загрузить данные из файла" />
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox alignment="CENTER_LEFT" prefHeight="30.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Button fx:id="btnRecordInMySQL" mnemonicParsing="false" text="Выгрузить в MySQL" />
+               </children>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+</StackPane>

@@ -1,0 +1,62 @@
+/**
+ * vista.css
+ *   Place in the same source directory as Main.java
+ *   Ensure that your build system copies this file to your build output directory.
+ */
+
+#headerLabel {
+    -fx-background-color: steelblue;
+    -fx-text-fill: white;
+    -fx-padding: 5px;
+}
+/*
+#vistaHolder {
+    -fx-background-color: #7c077d;
+}
+/*
+#vista1 {
+    -fx-background-color: aliceblue;
+}
+/*
+#vista2 {
+    -fx-background-color: coral;
+}
+*/
+.button {
+    -fx-base: lightblue;
+    -fx-font-size: 14px;
+}
+
+
+
+
+
+/* Default row background is black */
+/*.table-row-cell {
+    -fx-background-color: black;
+}
+
+/* Text in the rows will be white *
+/*
+.table-row-cell .text {
+       -fx-fill: white ;
+}
+*/
+/*
+Pseudo class 'up' will change the row background
+ color to green when activated 
+ */
+.table-row-cell:up 
+{
+    -fx-background-color: #b4fab4; 
+}
+
+/*
+Pseudo class 'down' will change the row background 
+color to red when activated
+*/
+/*
+.table-row-cell:down {
+    -fx-background-color: #A30029;
+}
+*/
